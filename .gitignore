@@ -1,0 +1,11 @@
+# Binários e arquivos compilados
+*.exe
+*.o
+*.obj
+
+# Arquivos do VSCode
+.vscode/
+
+# Outros arquivos temporários
+*.log
+*.tmp

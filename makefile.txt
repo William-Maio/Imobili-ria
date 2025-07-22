@@ -1,0 +1,22 @@
+#nome do compilador
+CXX = g++
+
+#flags de compilação
+CXXFLAGS = -Wall -std=c++11
+
+#nome do executável
+TARGET = imobiliaria.exe
+
+#arquivos fonte
+ SRC = imobiliaria_main.cpp funcoes_imobiliaria.cpp
+
+#arquivos objeto
+OBJ = $(SRC:.cpp=.o)
+
+#regra principal
+$(TARGET): $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJ)
+
+#Regra para limpar os arquivos objeto e executável
+clean:
+	del /Q *.o *.exe 2>nul || true
